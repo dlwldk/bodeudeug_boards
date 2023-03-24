@@ -1,46 +1,49 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<div id="team">
-    <h1>보드게임</h1>
-    <h2>총 : <em id="count"></em>개</h2>
-    <div class="list">
-      <button type="button">포커(레드)</button>
-      <button type="button">포커(블루)</button>
-      <button type="button">스플랜더</button>
-      <button type="button">할리갈리</button>
-      <button type="button">카탄</button>
-      <button type="button">젠가</button>
-      <button type="button">카멜업(2탄)</button>
-      <button type="button">클루</button>
-      <button type="button">펭귄얼음깨기</button>
-      <button type="button">아발론</button>
-      <button type="button">루미큐브(클래식)</button>
-      <button type="button">할리갈리 컵스</button>
-      <button type="button">다빈치코드</button>
-      <button type="button">티츄(블랙)</button>
-      <button type="button">티켓투라이드</button>
-      <button type="button">노땡스</button>
-      <button type="button">트럼프카드</button>
-      <button type="button">핸즈업</button>
-      <button type="button">라스베가스</button>
-      <button type="button">애니모 크레이지</button>
-      <button type="button">한밤의 늑대인간</button>
-      <button type="button">세븐원더스</button>
-      <button type="button">세븐원더스(듀얼)</button>
-      <button type="button">디크립토</button>
-      <button type="button">반디도</button>
-      <button type="button">스탁파일</button>
-    </div>
+<header>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+</header>
+
+<h1>보드게임 리스트(TOTAL 26)</h1>
+<p>사용 후 정리 정돈 부탁드립니다:)</p>
+<div class="frame">
+  <button class="custom-btn btn-16">포커(레드)</button>
+  <button class="custom-btn btn-16">포커(블루)</button>
+  <button class="custom-btn btn-16">스플랜더</button>
+  <button class="custom-btn btn-16">할리갈리</button>
+  <button class="custom-btn btn-16">카탄</button>
+  <button class="custom-btn btn-16">젠가</button>
+  <button class="custom-btn btn-16">카멜업(2탄)</button>
+  <button class="custom-btn btn-16">클루</button>
+  <button class="custom-btn btn-16">펭귄얼음깨기</button>
+  <button class="custom-btn btn-16">아발론</button>
+  <button class="custom-btn btn-16">루미큐브(클래식)</button>
+  <button class="custom-btn btn-16">할리갈리 컵스</button>
+  <button class="custom-btn btn-16">다빈치코드</button>
+  <button class="custom-btn btn-16">티츄(블랙)</button>
+  <button class="custom-btn btn-16">티켓투라이드</button>
+  <button class="custom-btn btn-16">노땡스</button>
+  <button class="custom-btn btn-16">트럼프카드</button>
+  <button class="custom-btn btn-16">핸즈업</button>
+  <button class="custom-btn btn-16">라스베가스</button>
+  <button class="custom-btn btn-16">애니모 크레이지</button>
+  <button class="custom-btn btn-16">한밤의 늑대인간</button>
+  <button class="custom-btn btn-16">세븐원더스</button>
+  <button class="custom-btn btn-16">세븐원더스(듀얼)</button>
+  <button class="custom-btn btn-16">반디도</button>
+  <button class="custom-btn btn-16">디크립토</button>
+  <button class="custom-btn btn-16">스탁파일</button>
+  <p style="font-family: Andale Mono, monospace;">
+    HAVE A NICE DAY.BODEUDEUG</p>
+</div>
+
 
 <script type="text/javascript">
-    var selArr = new Array();
-    var selNum = 0;
-    var teamNum = 0;
-    var memCnt = 0;
-    var count = 0;
-
-    $(document).ready(function() {
-        selNum = $("#team .list").find("button").length;
-        $("#count").text(selNum);
+ $(document).ready(function() {
+    $(".btn-16").click(function() {
+        $(this).toggleClass("sel");
     });
+ });
+
 </script>
