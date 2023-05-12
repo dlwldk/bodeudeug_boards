@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 </header>
 
-<h1>보드게임(TOTAL 26개)</h1>
+<h1 id="totalGame">보드게임(TOTAL 27개)</h1>
 <p>사용 후 정리 정돈 부탁드립니다:)</p>
 <div class="frame">
   <button class="custom-btn btn-16">포커(레드)</button>
@@ -31,6 +31,7 @@
   <button class="custom-btn btn-16">한밤의 늑대인간</button>
   <button class="custom-btn btn-16">세븐원더스</button>
   <button class="custom-btn btn-16">세븐원더스(듀얼)</button>
+  <button class="custom-btn btn-16">코드네임</button>
   <button class="custom-btn btn-16">반디도</button>
   <button class="custom-btn btn-16">디크립토</button>
   <button class="custom-btn btn-16">스탁파일</button>
@@ -40,7 +41,9 @@
 
 
 <script type="text/javascript">
+ var totalGame = $(".frame").find("button").length;
  $(document).ready(function() {
+    $("#totalGame").text("보드게임(TOTAL " + totalGame + "개)");
     $(".btn-16").click(function() {
         $(this).toggleClass("sel");
     });
