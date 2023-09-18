@@ -75,7 +75,6 @@ li{
 .s15{list-style-type: katakana-iroha;}
 .s16{list-style-type: cjk-ideographic;}
 .s17{list-style-image: url(//goo.gl/L3tqpe);}
-.s18{list-style: none;}
 .s18 li:before{
   content: '';
   width: 20px;
