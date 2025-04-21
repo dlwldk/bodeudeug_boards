@@ -1,86 +1,108 @@
-<link rel="stylesheet" href="style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보드득 보드게임</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/bm-hanna.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/bm-dohyeon.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/bm-jua.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/bm-yeonsung.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/bmhannaprootf.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <i class="fa-solid fa-dice-six title-decoration dice-left"></i>
+            <i class="fa-solid fa-puzzle-piece title-decoration puzzle-top-left"></i>
+            <i class="fa-solid fa-chess-pawn title-decoration meeple-bottom-left"></i>
+            <h1 class="main-title">보드득</h1>
+            <i class="fa-solid fa-dice-five title-decoration dice-right"></i>
+            <i class="fa-solid fa-puzzle-piece title-decoration puzzle-top-right"></i>
+            <i class="fa-solid fa-chess-pawn title-decoration meeple-bottom-right"></i>
+        </div>
 
-<div class="X">
-  <h1 id="totalGame">Board Games</h1>
+        <div class="team-table">
+            <div class="team-header">
+                <h1 id="totalGame">보드게임</h1>
+            </div>
+            
+            <div class="game-categories">
+                <div class="category-box">
+                    <h3>6인 이하</h3>
+                    <div class="game-list">
+                        <div>포커</div>
+                        <div>스플랜더 (2-4인)</div>
+                        <div>할리갈리 (2-6인)</div>
+                        <div>할리갈리 (2-6인)</div>
+                        <div>카탄 (3-4인)</div>
+                        <div>클루 (3-6인)</div>
+                        <div>펭귄 얼음 깨기 (2-4인)</div>
+                        <div>루미큐브(클래식) (2-6인)</div>
+                        <div>할리갈리 컵스 (2-4인)</div>
+                        <div>다빈치코드 (2-4인)</div>
+                        <div>티켓투라이드 (2-5인)</div>
+                        <div>라스베가스 (2-5인)</div>
+                        <div>세브원더스(듀얼) (2인)</div>
+                        <div>반디도 (1-4인)</div>
+                        <div>디크립토 (2-4인)</div>
+                        <div>스탁파일 (2-5인)</div>
+                        <div>위즈스톤 (2인)</div>
+                        <div>펜데믹 레거시1 (2-4인)</div>
+                        <div>돌팔이 약장수 (2-4인)</div>
+                        <div>카르카손 (2-5인)</div>
+                        <div>이스탄불 주사위게임 (2-4인)</div>
+                        <div>렉시오(3-5인)</div>
+                        <div>우봉고 (1-4인)</div>
+                        <div>캐스캐디아 (1-4인)</div>
+                        <div>커피러시 (2-4인)</div>
+                    </div>
+                </div>
 
-  <ul class="SG" style="height: 99.8%">
-    <li class="sgLi">
-      <div class="box">
-        <h3>6인 이하</h3>
-        <ul class="s1">
-          <li>포커</li>
-          <li>스플랜더 (2-4인)</li>
-          <li>할리갈리 (2-6인)</li>
-          <li>할리갈리 컵스(2-6인)</li>
-          <li>카탄 (3-4인)</li>
-          <li>클루 (3-6인)</li>
-          <li>펭귄 얼음 깨기 (2-4인)</li>
-          <li>루미큐브(클래식) (2-6인)</li>
-          <li>할리갈리 컵스 (2-4인)</li>
-          <li>다빈치코드 (2-4인)</li>
-          <li>티켓투라이드 (2-5인)</li>
-          <li>라스베가스 (2-5인)</li>
-          <li>세브원더스(듀얼) (2인)</li>
-          <li>반디도 (1-4인)</li>
-          <li>디크립토 (2-4인)</li>
-          <li>스탁파일 (2-5인)</li>
-          <li>위즈스톤 (2인)</li>
-          <li>펜데믹 레거시1 (2-4인)</li>
-          <li>돌팔이 약장수 (2-4인)</li>
-          <li>카르카손 (2-5인)</li>
-          <li>이스탄불 주사위게임 (2-4인)</li>
-          <li>렉시오(3-5인)</li>
-          <li>우봉고 (1-4인)</li>
-          <li>캐스캐디아 (1-4인)</li>
-          <li>커피러시 (2-4인)</li>
-        </ul>
-      </div>
-    </li>
-    <li class="sgLi">
-      <div class="box">
-        <h3>파티</h3>
-        <ul class="s1">
-          <li>젠가 (1-8인)</li>
-          <li>카멜업 (2-8인)</li>
-          <li>아발론 (5-10인)</li>
-          <li>티츄 (3-10인)</li>
-          <li>트럼프카드</li>
-          <li>핸즈업 (3-8인)</li>
-          <li>애니모크레이지 (4-10인)</li>
-          <li>한밤의 늑대인간 (3-10인)</li>
-          <li>세븐원더스 (2-7인)</li>
-          <li>코드네임</li>
-          <li>5초준다 (2-8인)</li>
-          <li>달무티 (4-8인)</li>
-          <li>셀레스티아 (2-6인)</li>
-        </ul>
-      </div>
-    </li>
+                <div class="category-box">
+                    <h3>파티</h3>
+                    <div class="game-list">
+                        <div>젠가 (1-8인)</div>
+                        <div>카멜업 (2-8인)</div>
+                        <div>아발론 (5-10인)</div>
+                        <div>티츄 (3-10인)</div>
+                        <div>트럼프카드</div>
+                        <div>핸즈업 (3-8인)</div>
+                        <div>애니모크레이지 (4-10인)</div>
+                        <div>한밤의 늑대인간 (3-10인)</div>
+                        <div>세븐원더스 (2-7인)</div>
+                        <div>코드네임</div>
+                        <div>5초준다 (2-8인)</div>
+                        <div>달무티 (4-8인)</div>
+                        <div>요트다이스</div>
+                        <div>윙스팬 (1-5인)</div>
+                    </div>
+                </div>
 
-    <li class="sgLi">
-      <div class="box" style="width: 800px; height: 10vh;">
-        <h3>신상 게임(NEW)</h3>
-        <ul class="s1">
-          <li>커피러시 (2-4인)</li>
-          <li>5초준다 (2-8인)</li>
-          <li>달무티 (4-8인)</li>
-        </ul>
-      </div>
-    </li>
+                <div class="category-box">
+                    <h3>신상 게임(NEW)</h3>
+                    <div class="game-list">
+                        <div>요트다이스</div>
+                        <div>윙스팬 (1-5인)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h2>HAVE A NICE DAY.BODEUDEUG</h2>
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var totalGames = $(".game-list div").length;
+            $("#totalGame").text("보드게임(TOTAL " + totalGames + "개)");
+        });
+    </script>
+</body>
+</html>
 
-
-<script type="text/javascript">
- var totalGame = $(".sgLi").find("li").length - $(".sgLi").eq(2).find("li").length;
- $(document).ready(function() {
-    $("#totalGame").text("보드게임(TOTAL " + totalGame + "개)");
-    $(".btn-16").click(function() {
-        $(this).toggleClass("sel");
-    });
-
- });
-
-</script>
