@@ -1,99 +1,210 @@
-@font-face {
-  font-family: 'Dovemayo_gothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+:root {
+    --primary-color: #FF6B8B;
+    --secondary-color: #FFE5E9;
+    --text-color: #4A4A4A;
+    --background-color: #F8F8F8;
+    --border-color: #E0E0E0;
 }
 
-body{
-  padding: 0 2%;
-  color: #2e3e50;
-  background: #d8dddd;
-}
-.X{
-  margin: auto;
-  padding: 1% 2%;
-  max-width: 1440px;
-  border-radius: 5px;
-  background: #ecf0f1;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0, .3);
-}
-h1,h2,h3{
-  text-align: center;
-  //font-family: 'Baloo Tamma', cursive;
-  font-family: 'Dovemayo_gothic';
-}
-li{
-  color: #2c3e50;
-  font-size: 23px;
-  line-height: 30px;
-  text-align: justify;
-  letter-spacing: 2px;
-  font-family: 'Dovemayo_gothic';
-  padding-bottom: 5px;
-}
-/*SG = style grid*/
-.SG{
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  max-height: 94.5%;
-}
-.SG .sgLi{
-  min-width: 45%;
-  margin: 2% .35%;
-  display: inline-flex;
-  box-shadow: 0 2px 4px rgba(0,0,0, .2);
-}
-.SG .sgLi:hover{
-  box-shadow:0 5px 10px rgba(0,0,0,.15);}
-.SG .box{
-  width: 100%;
-  height: 100vh;
-  padding: 1% 2%;
-  background: #fff;
-  min-height: 200px;
-  max-height: 1000px;
-  box-sizing: border-box;
-}
-/*Styles */
-.df{list-style-type: disc;}
-.s1{list-style-type: square;}
-.s2{list-style-type: circle;}
-.s3{list-style-type: decimal;}
-.s4{list-style-type: decimal-leading-zero;}
-.s5{list-style-type: lower-alpha;}
-.s6{list-style-type: upper-alpha;}
-.s7{list-style-type: lower-roman;}
-.s8{list-style-type: upper-roman;}
-.s9{list-style-type: lower-greek;}
-.s10{list-style-type: georgian;}
-.s11{list-style-type: hebrew;}
-.s12{list-style-type: hiragana;}
-.s13{list-style-type: hiragana-iroha;}
-.s14{list-style-type: katakana;}
-.s15{list-style-type: katakana-iroha;}
-.s16{list-style-type: cjk-ideographic;}
-.s17{list-style-image: url(//goo.gl/L3tqpe);}
-.s18 li:before{
-  content: '';
-  width: 20px;
-  height: 20px;
-  margin-right: 15px;
-  display: inline-block;
-  background: url(//goo.gl/lcPSVD);
-  background-position: 50%;
-}
-.s19{list-style: none;}
-.s19 li:before{
-  content: '\f0a9';
-  margin-right: 15px;
-  font-family: FontAwesome;
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--background-color);
+    padding: 15px;
+    color: var(--text-color);
 }
 
-/* responsive grid*/
-@media (max-width: 970px){
-  .SG .sgLi{width: 180px;}}
-@media (max-width: 425px){
-  .SG .sgLi{width: 100%;}
+.title-container {
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.main-title {
+    font-family: 'BM HANNA Pro', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    margin: 0;
+    -webkit-text-stroke: 0.5px var(--primary-color);
+    text-shadow: 
+        2px 2px 0 var(--secondary-color),
+        -1px -1px 0 var(--secondary-color),
+        1px -1px 0 var(--secondary-color),
+        -1px 1px 0 var(--secondary-color),
+        1px 1px 0 var(--secondary-color);
+    filter: drop-shadow(0 2px 4px rgba(255, 107, 139, 0.3));
+}
+
+.title-decoration {
+    position: absolute;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    animation: float 3s ease-in-out infinite;
+}
+
+.dice-left {
+    left: 15%;
+    top: 60%;
+    transform: translateY(-50%) rotate(-15deg);
+}
+
+.dice-right {
+    right: 15%;
+    top: 60%;
+    transform: translateY(-50%) rotate(15deg);
+}
+
+.puzzle-top-left {
+    left: 25%;
+    top: 10%;
+    transform: rotate(-30deg);
+    font-size: 1.5rem;
+}
+
+.puzzle-top-right {
+    right: 25%;
+    top: 10%;
+    transform: rotate(30deg);
+    font-size: 1.5rem;
+}
+
+.meeple-bottom-left {
+    left: 30%;
+    bottom: -10%;
+    transform: rotate(-15deg);
+    font-size: 1.6rem;
+}
+
+.meeple-bottom-right {
+    right: 30%;
+    bottom: -10%;
+    transform: rotate(15deg);
+    font-size: 1.6rem;
+}
+
+.team-table {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.team-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-header h1 {
+    margin-bottom: 10px;
+    font-family: 'BM Jua', sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.game-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.category-box h3 {
+    font-family: 'BM Jua', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game-list div {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    border: 1px solid #FFB5B5;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.game-list div:hover {
+    background-color: #FFD0D0;
+    border-color: var(--primary-color);
+    color: #FF4D6D;
+    transform: translateY(-2px);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-50%) rotate(-15deg) translateY(0);
+    }
+    50% {
+        transform: translateY(-50%) rotate(-15deg) translateY(-5px);
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+        -webkit-text-stroke: 0.3px var(--primary-color);
+    }
+
+    .title-decoration {
+        font-size: 1.4rem;
+    }
+
+    .puzzle-top-left, .puzzle-top-right {
+        font-size: 1.2rem;
+    }
+
+    .meeple-bottom-left, .meeple-bottom-right {
+        font-size: 1.3rem;
+    }
+
+    .dice-left {
+        left: 5%;
+    }
+
+    .dice-right {
+        right: 5%;
+    }
+
+    .team-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .category-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .game-list div {
+        font-size: 13px;
+    }
 }
